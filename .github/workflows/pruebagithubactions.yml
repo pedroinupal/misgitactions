@@ -10,7 +10,7 @@ jobs:
       - name: Verifica el codigo del repositorio
         uses: actions/checkout@v2
       - run: echo "El repositorio: ${{ github.repository }} ha sido colonado al runner."
-      - run: echo El flujo de trabajo esta listo para para verificar el código en el runner."
+      - run: echo "El flujo de trabajo esta listo para para verificar el código en el runner."
       - name: Listar archivos en el repositorio
         run:
           ls ${{ github.workspace }}
