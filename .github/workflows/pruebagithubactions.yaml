@@ -5,13 +5,13 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - run:echo "El flujo de trabajo ha sido ejecutado en el evento: ${{ github.event_name }}."
-   - run: echo "El trabajo se esta ejecutando en un servidor ${{ runner.os }} hospedado en GitHub"
-   - run: echo "El nombre de la rama es: ${{ github.ref }} y tu repositorio es: ${{ github.repository }}."
-   - name: Verifica el codigo del repositorio
-     uses: actions/checkout@v2
-   - run: echo "El repositorio: ${{ github.repository }} ha sido colonado al runner."
-   - run: echo "El flujo de trabajo esta listo para para verificar el código en el runner."
-   - name: Listar archivos en el repositorio
+   - run:echo "El trabajo se esta ejecutando en un servidor ${{ runner.os }} hospedado en GitHub"
+   - run:echo "El nombre de la rama es: ${{ github.ref }} y tu repositorio es: ${{ github.repository }}."
+   - name:Verifica el codigo del repositorio
+     uses:actions/checkout@v2
+   - run:echo "El repositorio: ${{ github.repository }} ha sido colonado al runner."
+   - run:echo "El flujo de trabajo esta listo para para verificar el código en el runner."
+   - name:Listar archivos en el repositorio
      run:
       ls ${{ github.workspace }}
-   - run: echo "El estado del trabajo es: ${{ job.status }}."
+   - run:echo "El estado del trabajo es: ${{ job.status }}."
